@@ -5,9 +5,9 @@ import "./globals.css";
 // Could be extracted to a separate file
 const ttNorms = localFont({
   src: [
-    { path: './fonts/TTNorms-Regular.woff', weight: '300' },
-    { path: './fonts/TTNorms-Medium.woff', weight: '400' },
-    { path: './fonts/TTNorms-Bold.woff', weight: '700' },
+    { path: "./fonts/TTNorms-Regular.woff", weight: "300" },
+    { path: "./fonts/TTNorms-Medium.woff", weight: "400" },
+    { path: "./fonts/TTNorms-Bold.woff", weight: "700" },
   ],
   variable: "--text-tt-norms",
 });
@@ -25,10 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${ttNorms.className} antialiased`}
-      >
-        xD
+      <body className={`${ttNorms.className} text-font-base antialiased`}>
         {children}
       </body>
     </html>

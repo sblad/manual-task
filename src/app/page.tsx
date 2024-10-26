@@ -1,13 +1,13 @@
+import { HeroSection } from "./ui/hero/hero";
+
 export default function LandingPage() {
   return (
     <div className="">
       <main className="">
-        <section>Hero will be hero</section>
-        <section>Offer section will be here</section>
+        <HeroSection />
+        <section>About section will be here</section>
       </main>
-      <footer className="">
-        Footer content will be here...
-      </footer>
+      <footer className="">Footer content will be here...</footer>
     </div>
   );
 }
