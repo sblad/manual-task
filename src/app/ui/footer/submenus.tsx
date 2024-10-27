@@ -6,7 +6,10 @@ export async function Submenus() {
   const data = await fetchFooterData();
 
   return (
-    <div className="flex gap-[120px]">
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2 md:flex
+     gap-[40px] md:gap-[120px]"
+    >
       {data.map((item) => (
         <div key={item.section}>
           <Text
@@ -17,7 +20,7 @@ export async function Submenus() {
           >
             {item.section}
           </Text>
-          <ul className="flex flex-col gap-[20px] mt-[20px]">
+          <ul className="flex flex-col gap-[10px] lg:gap-[20px] mt-[20px]">
             {item.items.map((subitem) => (
               <SubmenuItem
                 key={subitem.name}

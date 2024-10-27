@@ -1,44 +1,24 @@
 import { Text } from "@app/app/design-components";
-import Image from "next/image";
 import { getAboutData } from "./application/get-about-data";
+import { AboutItem } from "./about-item";
 
 export async function AboutSection() {
   // Let's assume this data might come from a cms or an api
   const { viewModel } = await getAboutData();
 
   return (
-    <section className="max-w-[66%] m-auto pb-[90px]">
-      <Text as="h2" variant="h2" className="text-center pt-16">
+    <section className="max-w-[90%] lg:max-w-[66%] m-auto pb-[90px]">
+      <Text as="h2" variant="h2" className="text-center pt-4 md:pt-16">
         What we can help with
       </Text>
-      <div className="flex flex-col gap-[180px] mt-[70px]">
+      <div className="flex flex-col gap-12 lg:gap-[180px] mt-8 md:mt-[70px]">
         {viewModel.sectionData.map((data, index) => (
-          <div key={data.id} className="group flex even:flex-row-reverse">
-            <Image
-              src={data.imgUrl}
-              width={370}
-              height={445}
-              alt={data.subtitle}
-            />
-            <div className="group-odd:pl-[120px] group-even:pr-[120px] relative flex flex-col justify-center">
-              <Text
-                as="h3"
-                variant="body-small"
-                className="uppercase opacity-[0.7] tracking-[0.15em] pb-3"
-              >
-                {data.subtitle}
-              </Text>
-              <Text as="h1" variant="h3">
-                {data.title}
-              </Text>
-              <Text as="p" variant="body" weight="light" className="pt-5">
-                {data.content}
-              </Text>
-              <div className="absolute top-[-25%] group-odd:left-[-15%] group-even:right-[-15%] text-[450px] text-[#F3F7F4] -z-10">
-                {viewModel.getSectionIndex(index)}
-              </div>
-            </div>
-          </div>
+          <AboutItem
+            key={data.id}
+            data={data}
+            viewModel={viewModel}
+            index={index}
+          />
         ))}
       </div>
     </section>

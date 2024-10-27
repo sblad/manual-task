@@ -12,11 +12,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'green-base': '#0B3B3C',
-        'green-border': '#BDCDC5',
-        'green-light': '#E8EFE9',
-        'green-mid': '#6D8A83',
-        'brand-red': '#7E0707'
+        'brand-red': '#7E0707',
+        green: {
+          300: '#E8EFE9',
+          400: '#BDCDC5',
+          500: '#6D8A83',
+          600: '#A4B89F',
+          700: '#0B3B3C'
+        }
       },
       fontSize: {
         'xs': ['0.625rem', '0.9375rem'],
