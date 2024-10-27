@@ -19,8 +19,76 @@ const aboutData = [
     },
   ];
 
+
+const submenusConfig = [
+  {
+    section: "Product",
+    items: [
+      {
+        name: "Popular",
+        link: "/#",
+      },
+      {
+        name: "Trending",
+        link: "/#",
+      },
+      {
+        name: "Guided",
+        link: "/#",
+      },
+      {
+        name: "Products",
+        link: "/#",
+      },
+    ],
+  },
+  {
+    section: "Company",
+    items: [
+      {
+        name: "Press",
+        link: "/#",
+      },
+      {
+        name: "Mission",
+        link: "/#",
+      },
+      {
+        name: "Strategy",
+        link: "/#",
+      },
+      {
+        name: "About",
+        link: "/#",
+      },
+    ],
+  },
+  {
+    section: "Info",
+    items: [
+      {
+        name: "Support",
+        link: "/#",
+      },
+      {
+        name: "Customer Service",
+        link: "/#",
+      },
+      {
+        name: "Get started",
+        link: "/#",
+      },
+    ],
+  },
+];
+
   export const fetchAboutData = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2500));
 
     return aboutData;
+  }
+
+
+  export const fetchFooterData = async () => {
+    return submenusConfig;
   }

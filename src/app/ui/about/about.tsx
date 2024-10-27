@@ -8,7 +8,7 @@ export async function AboutSection() {
   const sectionData = await fetchAboutData();
 
   return (
-    <section className="max-w-[66%] m-auto">
+    <section className="max-w-[66%] m-auto pb-[90px]">
       <Text as="h2" variant="h2" className="text-center pt-16">
         What we can help with
       </Text>

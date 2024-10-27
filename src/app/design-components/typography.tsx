@@ -1,19 +1,12 @@
 import { clsx } from "clsx";
 
-interface Props {
-  variant: "h1" | "h2" | "h3" | "body" | "body-small";
-  children: React.ReactNode;
-  as: keyof JSX.IntrinsicElements;
-  className?: string;
-  weight?: "light" | "normal" | "bold";
-}
-
 const fontSize = {
   h1: "text-2xl",
   h2: "text-xl",
   h3: "text-l",
   body: "text-md",
   "body-small": "text-xs",
+  footer: "text-sm",
 };
 
 const fontWeight = {
@@ -21,6 +14,14 @@ const fontWeight = {
   normal: "font-normal",
   bold: "font-bold",
 };
+
+interface Props {
+  variant: keyof typeof fontSize;
+  children: React.ReactNode;
+  as: keyof JSX.IntrinsicElements;
+  className?: string;
+  weight?: keyof typeof fontWeight;
+}
 
 export function Text({
   variant,

@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ttNorms.className} text-font-base antialiased`}>
+      <body className={`${ttNorms.className} text-green-base antialiased`}>
         {children}
       </body>
     </html>
