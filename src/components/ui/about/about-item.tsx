@@ -1,6 +1,6 @@
-import { Text } from "@app/app/design-components";
+import { Text } from "@app/components/design-components";
 import Image from "next/image";
-import { AboutData } from "@app/app/lib/types";
+import { AboutData } from "@app/lib/types";
 import { AboutViewModel } from "./domain/about.view-model";
 
 interface Props {

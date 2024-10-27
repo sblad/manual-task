@@ -1,4 +1,4 @@
-import { Text } from "@app/app/design-components";
+import { Text } from "@app/components/design-components";
 import Image from "next/image";
 import { FollowUs } from "./follow-us";
 import { Submenus } from "./submenus";

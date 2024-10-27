@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Text } from "@app/app/design-components";
+import { Text } from "@app/components/design-components";
 
 export function FollowUs() {
   return (

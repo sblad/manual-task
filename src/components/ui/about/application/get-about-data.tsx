@@ -1,4 +1,4 @@
-import { fetchAboutData } from "@app/app/lib/data";
+import { fetchAboutData } from "@app/lib/data";
 import { AboutViewModel } from "../domain/about.view-model";
 
 export const getAboutData = async () => {

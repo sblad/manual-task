@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Text } from "@app/app/design-components";
+import { Button, Text } from "@app/components/design-components";
 import Link from "next/link";
 
 export function HeroSection() {

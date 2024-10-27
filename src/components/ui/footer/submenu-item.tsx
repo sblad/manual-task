@@ -1,4 +1,4 @@
-import { Text } from "@app/app/design-components";
+import { Text } from "@app/components/design-components";
 import Link from "next/link";
 
 interface SubitemProps {

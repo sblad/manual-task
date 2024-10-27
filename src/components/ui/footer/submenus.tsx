@@ -1,5 +1,5 @@
-import { Text } from "@app/app/design-components";
-import { fetchFooterData } from "@app/app/lib/data";
+import { Text } from "@app/components/design-components";
+import { fetchFooterData } from "@app/lib/data";
 import { SubmenuItem } from "./submenu-item";
 
 export async function Submenus() {

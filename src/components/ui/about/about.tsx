@@ -1,4 +1,4 @@
-import { Text } from "@app/app/design-components";
+import { Text } from "@app/components/design-components";
 import { getAboutData } from "./application/get-about-data";
 import { AboutItem } from "./about-item";
 

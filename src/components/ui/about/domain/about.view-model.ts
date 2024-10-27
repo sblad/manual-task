@@ -1,4 +1,4 @@
-import { AboutData } from "@app/app/lib/types";
+import { AboutData } from "@app/lib/types";
 
 export class AboutViewModel {
     constructor(private readonly data: AboutData[]) {

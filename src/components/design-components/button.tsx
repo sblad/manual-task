@@ -1,4 +1,4 @@
-import { Text } from "@app/app/design-components/typography";
+import { Text } from "@app/components/design-components/typography";
 import clsx from "clsx";
 
 const buttonVariants = {
