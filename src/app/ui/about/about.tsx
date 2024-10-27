@@ -1,11 +1,10 @@
 import { Text } from "@app/app/design-components";
-import { fetchAboutData } from "@app/app/lib/data";
 import Image from "next/image";
+import { getAboutData } from "./application/get-about-data";
 
 export async function AboutSection() {
   // Let's assume this data might come from a cms or an api
-  // TODO move logic to hook and add view model for index display
-  const sectionData = await fetchAboutData();
+  const { viewModel } = await getAboutData();
 
   return (
     <section className="max-w-[66%] m-auto pb-[90px]">
@@ -13,7 +12,7 @@ export async function AboutSection() {
         What we can help with
       </Text>
       <div className="flex flex-col gap-[180px] mt-[70px]">
-        {sectionData.map((data, index) => (
+        {viewModel.sectionData.map((data, index) => (
           <div key={data.id} className="group flex even:flex-row-reverse">
             <Image
               src={data.imgUrl}
@@ -36,7 +35,7 @@ export async function AboutSection() {
                 {data.content}
               </Text>
               <div className="absolute top-[-25%] group-odd:left-[-15%] group-even:right-[-15%] text-[450px] text-[#F3F7F4] -z-10">
-                0{index + 1}
+                {viewModel.getSectionIndex(index)}
               </div>
             </div>
           </div>

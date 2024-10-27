@@ -1,6 +1,7 @@
 import { randomUUID } from "crypto";
+import { AboutData, FooterSection } from "./types";
 
-const aboutData = [
+const aboutData: AboutData[] = [
     {
       id: randomUUID(),
       subtitle: "Hair loss",
@@ -20,7 +21,7 @@ const aboutData = [
   ];
 
 
-const submenusConfig = [
+const submenusConfig: FooterSection[] = [
   {
     section: "Product",
     items: [
