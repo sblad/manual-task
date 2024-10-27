@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="bg-green-300 pt-[36px] lg:pt-[72px]">
       <div className="w-[80%] m-auto flex flex-col lg:flex-row items-start justify-between pb-[72px]">
         <Link href="#">
-          <Image src="/symbol.svg" alt="Manual symbol" width={75} height={75} />
+          <Image src="/logo.svg" alt="Manual symbol" width={75} height={75} />
         </Link>
         <div className="flex gap-[25px] mt-[20px] lg:mt-0">
           <Submenus />

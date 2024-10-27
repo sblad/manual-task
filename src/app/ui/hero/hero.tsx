@@ -7,7 +7,7 @@ export function HeroSection() {
     <section className="pb-12 md:max-h-[750px] bg-green-600 bg-center lg:bg-top md:bg-[url('/hero-bg.png')] bg-cover">
       <div className="w-[90%] md:w-[80%] mx-auto pt-8">
         <Link href="#">
-          <Image src="/symbol.svg" alt="Manual symbol" width={40} height={40} />
+          <Image src="/logo.svg" alt="Manual symbol" width={40} height={40} />
         </Link>
         <div className="mt-4 md:mt-32 md:w-[60%] lg:w-[40%]">
           <Text variant="h1" as="h1" className="pb-5">
