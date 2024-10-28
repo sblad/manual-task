@@ -5,6 +5,7 @@ import { ChoiceTypeComponent } from "../ui/option-components/choice-type-compone
 export interface OptionComponentProps {
   option: QuizOption;
   onAnwserSelected: (value: string | boolean, isRejection: boolean) => void;
+  previouslySelected: boolean;
 }
 
 export const useOptionComponent = (

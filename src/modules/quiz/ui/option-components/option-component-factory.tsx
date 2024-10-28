@@ -5,14 +5,22 @@ export interface OptionComponentFactoryProps {
   questionType: QuestionType;
   option: QuizOption;
   onAnwserSelected: (value: string | boolean, isRejection: boolean) => void;
+  previouslySelected: boolean;
 }
 
 export function OptionComponentFactory({
   questionType,
   option,
   onAnwserSelected,
+  previouslySelected,
 }: OptionComponentFactoryProps) {
   const Component = useOptionComponent(questionType);
 
-  return <Component option={option} onAnwserSelected={onAnwserSelected} />;
+  return (
+    <Component
+      previouslySelected={previouslySelected}
+      option={option}
+      onAnwserSelected={onAnwserSelected}
+    />
+  );
 }

@@ -17,6 +17,7 @@ export function Quiz({ quizData }: { quizData: QuizResponse }) {
     canGoBack,
     goBack,
     startOver,
+    previousAnswer,
   } = useQuizState(quizData);
 
   const router = useRouter();
@@ -41,6 +42,7 @@ export function Quiz({ quizData }: { quizData: QuizResponse }) {
             questionType={currentQuestion.type}
             option={option}
             key={String(option.value) + index}
+            previouslySelected={option.value === previousAnswer}
           />
         ))}
       </div>

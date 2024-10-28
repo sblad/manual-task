@@ -36,5 +36,6 @@ export const useQuizState = (quizData: QuizResponse) => {
     isCompleted: quizModel.isCompleted(),
     isFailed: quizModel.isFailed(),
     canGoBack: quizModel.canGoBack(),
+    previousAnswer: state.answers[state.currentQuestionIndex],
   };
 };
