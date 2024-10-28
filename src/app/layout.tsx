@@ -19,14 +19,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  modal,
   children,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${ttNorms.className} text-green-700 antialiased`}>
         {children}
+        {modal}
       </body>
     </html>
   );

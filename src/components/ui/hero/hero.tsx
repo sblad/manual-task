@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { Button, Text } from "@app/components/design-components";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="pb-12 md:max-h-[750px] bg-green-600 bg-center lg:bg-top md:bg-[url('/hero-bg.png')] bg-cover">
       <div className="w-[90%] md:w-[80%] mx-auto pt-8">
@@ -17,7 +22,9 @@ export function HeroSection() {
             We&apos;re working around the clock to bring you a holistic approach
             to your wellness. From top to bottom, inside and out.
           </Text>
-          <Button variant="hero">Take the quiz</Button>
+          <Button variant="hero" onClick={() => router.push("/quiz")}>
+            Take the quiz
+          </Button>
         </div>
       </div>
     </section>
