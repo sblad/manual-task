@@ -31,7 +31,7 @@ export function Quiz({ quizData }: { quizData: QuizResponse }) {
   }
 
   return (
-    <div className="flex flex-col max-w-[60%] h-full mx-auto text-center items-center">
+    <div className="flex flex-col max-w-[60%] h-full mx-auto text-center items-center overflow-y-scroll pb-12">
       <Text variant="h2" as="h1">
         {currentQuestion.question}
       </Text>
