@@ -8,6 +8,11 @@ class StorageService {
   constructor() {}
 
   public readState(): QuizState | null {
+    // When building, next js still attempts to run this code on the server even if the components are marked with 'use client'
+    if (typeof window === "undefined") {
+      return null;
+    }
+
     const state = localStorage.getItem(STORAGE_KEY);
 
     if (!state) {
@@ -23,6 +28,7 @@ class StorageService {
   }
 }
 
+// Don't need to inject this service. Singleton is sufficient.
 const storageSingleton = new StorageService();
 
 export default storageSingleton;

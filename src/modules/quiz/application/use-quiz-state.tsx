@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useReducer } from "react";
 import { reducer } from "./quiz-reducer";
 import { QuizResponse } from "@app/lib/types";
