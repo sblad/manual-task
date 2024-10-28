@@ -18,4 +18,8 @@ export class QuizModel {
   public isFailed() {
     return this.state.status === "failed";
   }
+
+  public canGoBack() {
+    return this.state.currentQuestionIndex > 0;
+  }
 }

@@ -16,16 +16,19 @@ export interface FooterSection {
   items: FooterSubitem[];
 }
 
-interface QuizOption {
+export interface QuizOption {
   display: string;
   value: string | boolean;
   isRejection: boolean;
 }
 
-interface QuizQuestion {
+// only single question type is present right now. Including that in the type for future extensibility
+export type QuestionType = "ChoiceType";
+
+export interface QuizQuestion {
   display?: string;
   question: string;
-  type: string;
+  type: QuestionType;
   options: QuizOption[];
 }
 

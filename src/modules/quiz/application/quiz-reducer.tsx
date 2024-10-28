@@ -44,6 +44,14 @@ export function reducer(state: QuizState, action: QuizEvents): QuizState {
         currentQuestionIndex: state.currentQuestionIndex - 1,
       };
     }
+    case "start-over": {
+      return {
+        status: "in-progress",
+        totalQuestions: state.totalQuestions,
+        currentQuestionIndex: 0,
+        answers: {},
+      };
+    }
     default:
       return state;
   }

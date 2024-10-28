@@ -16,4 +16,11 @@ export class GoBackEvent {
   constructor() {}
 }
 
-export type QuizEvents = QuestionAnsweredEvent | GoBackEvent;
+export class StartOverEvent {
+  public static readonly type = "start-over" as const;
+  public readonly type = StartOverEvent.type;
+
+  constructor() {}
+}
+
+export type QuizEvents = QuestionAnsweredEvent | GoBackEvent | StartOverEvent;

@@ -1,15 +1,18 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Props {
   children: React.ReactNode;
-  closeHref: string;
 }
 
-export function Modal({ children, closeHref }: Props) {
+export function Modal({ children }: Props) {
+  const router = useRouter();
+
   return (
     <div className="fixed top-0 w-screen h-screen bg-white">
-      <Link href={closeHref}>
+      <button onClick={() => router.back()}>
         <Image
           src="/close.svg"
           width={32}
@@ -17,7 +20,7 @@ export function Modal({ children, closeHref }: Props) {
           alt="Close modal"
           className="absolute top-10 right-10"
         />
-      </Link>
+      </button>
       {children}
     </div>
   );

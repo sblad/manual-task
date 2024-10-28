@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import { AboutSection } from "../components/ui/about/about";
-import { HeroSection } from "../components/ui/hero/hero";
-import { AboutSkeleton } from "../components/ui/about/about-skeleton";
-import { Footer } from "../components/ui/footer/footer";
+import { AboutSection } from "../modules/about/about";
+import { HeroSection } from "../modules/hero/hero";
+import { AboutSkeleton } from "../modules/about/about-skeleton";
+import { Footer } from "../modules/footer/footer";
 
 export default function LandingPage() {
   return (

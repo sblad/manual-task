@@ -24,11 +24,17 @@ export const useQuizState = (quizData: QuizResponse) => {
     dispatch(new GoBackEvent());
   };
 
+  const startOver = () => {
+    dispatch({ type: "start-over" });
+  };
+
   return {
     currentQuestion: quizModel.getQuestion(),
     answerQuestion,
     goBack,
+    startOver,
     isCompleted: quizModel.isCompleted(),
     isFailed: quizModel.isFailed(),
+    canGoBack: quizModel.canGoBack(),
   };
 };

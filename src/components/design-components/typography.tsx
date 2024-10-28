@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 
 const fontSize = {
   h1: "text-xl md:text-2xl",
-  h2: "text-xl",
+  h2: "text-l md:text-xl",
   h3: "text-l",
   body: "text-md",
   "body-small": "text-xs",

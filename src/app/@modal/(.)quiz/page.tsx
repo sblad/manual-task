@@ -3,7 +3,7 @@ import { Modal } from "@app/components/design-components/modal";
 
 export default function QuizModal() {
   return (
-    <Modal closeHref="/">
+    <Modal>
       <QuizPage />
     </Modal>
   );
