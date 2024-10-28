@@ -1,16 +1,32 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { reducer } from "./quiz-reducer";
 import { QuizResponse } from "@app/lib/types";
 import { QuizModel } from "../domain/quiz-model";
-import { GoBackEvent, QuestionAnsweredEvent } from "../domain/quiz-events";
+import {
+  GoBackEvent,
+  QuestionAnsweredEvent,
+  StartOverEvent,
+} from "../domain/quiz-events";
+import StorageService from "@app/utils/storage-service";
 
 export const useQuizState = (quizData: QuizResponse) => {
-  const [state, dispatch] = useReducer(reducer, {
-    status: "in-progress",
-    totalQuestions: quizData.questions.length,
-    currentQuestionIndex: 0,
-    answers: {},
-  });
+  const storedState = StorageService.readState();
+
+  const [state, dispatch] = useReducer(
+    reducer,
+    storedState
+      ? storedState
+      : {
+          status: "in-progress",
+          totalQuestions: quizData.questions.length,
+          currentQuestionIndex: 0,
+          answers: {},
+        }
+  );
+
+  useEffect(() => {
+    StorageService.writeState(state);
+  }, [state]);
 
   const quizModel = new QuizModel(state, quizData);
 
@@ -25,7 +41,7 @@ export const useQuizState = (quizData: QuizResponse) => {
   };
 
   const startOver = () => {
-    dispatch({ type: "start-over" });
+    dispatch(new StartOverEvent());
   };
 
   return {
