@@ -9,6 +9,7 @@ export default function LandingPage() {
     <div>
       <main>
         <HeroSection />
+        {/* With experimental ppr enabled this could dynamically load about page content */}
         <Suspense fallback={<AboutSkeleton />}>
           <AboutSection />
         </Suspense>
